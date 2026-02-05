@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Appartements disponibles</h2>
+
+    {% for appartement in appartements %}
+    <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+        <h3>{{ appartement.titre }}</h3>
+        <p><strong>Quartier :</strong> {{ appartement.quartier }}</p>
+        <p><strong>Type :</strong> {{ appartement.type_logement }}</p>
+        <p><strong>Prix :</strong> {{ appartement.prix }} FCFA</p>
+        <p>{{ appartement.description }}</p>
+        <p><strong>Contact :</strong> {{ appartement.contact_proprietaire }}</p>
+    </div>
+    {% endfor %}
+    <p>Trouvez facilement votre futur chez-vous en quelques clics.Appartement , studio,chambes...votre logenent ideal est a notre 
+        portee
+    </p>
+</body>
+
+</html>
